@@ -2,8 +2,31 @@
 
 This library supports generating and decoding [JSON Web Tokens](http://tools.ietf.org/html/draft-jones-json-web-token-10).
 
-## Installation
-The easiest way to install is via NuGet.  See [here](https://nuget.org/packages/JWT).  Else, you can download and compile it yourself.
+## Installation (for Unity 2020 or later)
+
+### Using Unity Package Manager
+**Step 1: Configure Scoped Registry**
+- Navigate to `Project Settings` > `Package Manager`.
+- Verify or add a new Scoped Registry with the following details:
+  - **URL:** `https://package.openupm.com`
+  - **Scope:** `com.taygeek`
+- Click `Apply` to save the configuration.
+
+**Step 2: Add Package**
+- Open the `Package Manager`.
+- Click the `+` button and select `Add package by name...`.
+- Type `com.taygeek.unity.jwt` and press `Add`.
+- Wait for the package to finish installing.
+
+
+### Using OpenUPM
+
+This package is available on [OpenUPM](https://openupm.com).  
+You can install it via [openupm-cli](https://github.com/openupm/openupm-cli).
+
+```
+openupm add com.coffee.upm-git-extension
+```
 
 ## Usage
 ### Creating Tokens

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using Newtonsoft.Json;
 
 namespace JWT
 {
@@ -14,7 +14,7 @@ namespace JWT
         /// <returns>JSON string</returns>
         public string Serialize(object obj)
         {
-            return JsonUtility.ToJson(obj);
+            return JsonConvert.SerializeObject(obj, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace JWT
         /// <returns>typed object</returns>
         public T Deserialize<T>(string json)
         {
-            return JsonUtility.FromJson<T>(json);
+            return JsonConvert.DeserializeObject<T>(json);
         }
     }
 }
